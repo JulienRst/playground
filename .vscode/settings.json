@@ -1,0 +1,6 @@
+{
+  "eslint.runtime": "18.12.1",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
