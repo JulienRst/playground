@@ -1,15 +1,15 @@
 import { Canvas } from '@react-three/fiber';
-import RotatingCube from 'components/rotatingCube';
+import InfiniteCube from 'components/infiniteCube';
 import React from 'react';
 import styles from './app.module.scss';
 
 const App: React.FC = () => {
   return (
     <div id={styles.canvasContainer}>
-      <Canvas>
+      <Canvas camera={{ position: [0, 4, 8] }}>
         <ambientLight intensity={0.1} />
         <directionalLight color="red" position={[0, 0, 5]} />
-        <RotatingCube />
+        <InfiniteCube />
       </Canvas>
     </div>
   );
