@@ -6,6 +6,7 @@
     "node": "18.12.1"
   },
   "dependencies": {
+    "@react-three/drei": "^9.56.25",
     "@react-three/fiber": "^8.11.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -78,7 +79,7 @@
     "singleQuote": true,
     "trailingComma": "all",
     "semi": true,
-    "printWidth": 80,
+    "printWidth": 90,
     "tabWidth": 2
   }
 }
