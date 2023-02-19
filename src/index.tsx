@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
+import 'reset.scss';
 
 const rootElem = document.getElementById('root');
 if (!rootElem) {

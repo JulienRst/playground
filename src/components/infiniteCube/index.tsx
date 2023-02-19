@@ -1,5 +1,5 @@
 import { useFrame } from '@react-three/fiber';
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Group } from 'three';
 import Cube from './components/cube';
 import { calcDistFromIndex } from './services/calcDistFromIndex';
@@ -22,7 +22,7 @@ const InfiniteCube: React.FC<InfiniteCubeProps> = ({
   let currentTime = 0;
   const frameRate = 1000 / 80;
   const group = useRef<Group>(null);
-  const [cubeDatas] = useState(initCubeData(numberPerSide, cubeSize));
+  const cubeDatas = initCubeData(numberPerSide, cubeSize);
 
   useFrame(() => {
     if (group.current) {
