@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./fonts/NotoSans/NotoSans.eot');
+  src: url('./fonts/NotoSans/NotoSans.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/NotoSans/NotoSans.woff2') format('woff2'),
+    url('./fonts/NotoSans/NotoSans.woff') format('woff'),
+    url('./fonts/NotoSans/NotoSans.ttf') format('truetype'),
+    url('./fonts/NotoSans/NotoSans.svg#NotoSans') format('svg');
+  font-weight: normal;
+  font-display: fallback;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./fonts/NotoSans/NotoSans-BoldItalic.eot');
+  src: url('./fonts/NotoSans/NotoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/NotoSans/NotoSans-BoldItalic.woff2') format('woff2'),
+    url('./fonts/NotoSans/NotoSans-BoldItalic.woff') format('woff'),
+    url('./fonts/NotoSans/NotoSans-BoldItalic.ttf') format('truetype'),
+    url('./fonts/NotoSans/NotoSans-BoldItalic.svg#NotoSans-BoldItalic') format('svg');
+  font-weight: bold;
+  font-display: fallback;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./fonts/NotoSans/NotoSans-Italic.eot');
+  src: url('./fonts/NotoSans/NotoSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/NotoSans/NotoSans-Italic.woff2') format('woff2'),
+    url('./fonts/NotoSans/NotoSans-Italic.woff') format('woff'),
+    url('./fonts/NotoSans/NotoSans-Italic.ttf') format('truetype'),
+    url('./fonts/NotoSans/NotoSans-Italic.svg#NotoSans-Italic') format('svg');
+  font-weight: normal;
+  font-display: fallback;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('./fonts/NotoSans/NotoSans-Bold.eot');
+  src: url('./fonts/NotoSans/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/NotoSans/NotoSans-Bold.woff2') format('woff2'),
+    url('./fonts/NotoSans/NotoSans-Bold.woff') format('woff'),
+    url('./fonts/NotoSans/NotoSans-Bold.ttf') format('truetype'),
+    url('./fonts/NotoSans/NotoSans-Bold.svg#NotoSans-Bold') format('svg');
+  font-weight: bold;
+  font-display: fallback;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Titilium';
+  src: url('./fonts/TitiliumBlack/TitilliumWeb-Black.eot');
+  src: url('./fonts/TitiliumBlack/TitilliumWeb-Black.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/TitiliumBlack/TitilliumWeb-Black.woff2') format('woff2'),
+    url('./fonts/TitiliumBlack/TitilliumWeb-Black.woff') format('woff'),
+    url('./fonts/TitiliumBlack/TitilliumWeb-Black.ttf') format('truetype'),
+    url('./fonts/TitiliumBlack/TitilliumWeb-Black.svg#TitilliumWeb-Black') format('svg');
+  font-weight: normal;
+  font-display: fallback;
+  font-style: normal;
+}

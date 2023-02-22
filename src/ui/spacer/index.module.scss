@@ -1,0 +1,139 @@
+@import 'ui/variables.module.scss';
+
+.spaceContainer {
+  display: flex;
+  width: 100%;
+  min-width: 0; // Fix for flex scheananigans : https://dfmcphee.com/flex-items-and-min-width-0
+
+  &.grow {
+    flex-grow: 1;
+  }
+
+  &.justify-start {
+    justify-content: flex-start;
+  }
+
+  &.justify-end {
+    justify-content: flex-end;
+  }
+
+  &.justify-center {
+    justify-content: center;
+
+    &>.spaceContainer {
+      width: auto;
+    }
+  }
+
+  &.justify-space-around {
+    justify-content: space-around;
+
+    &>.spaceContainer {
+      width: auto;
+    }
+  }
+
+  &.justify-space-between {
+    justify-content: space-between;
+
+    &>.spaceContainer {
+      width: auto;
+    }
+  }
+
+  &.align-start {
+    align-items: flex-start;
+  }
+
+  &.align-center {
+    align-items: center;
+  }
+
+  &.align-end {
+    align-items: flex-end;
+  }
+
+  &.align-baseline {
+    align-items: baseline;
+  }
+
+  &.horizontal {
+    flex-direction: row;
+
+    &.size-extra-small {
+      &>*:not(:last-child) {
+        margin-right: $paddingXsm;
+      }
+    }
+
+    &.size-small {
+      &>*:not(:last-child) {
+        margin-right: $paddingSm;
+      }
+    }
+
+    &.size-middle {
+      &>*:not(:last-child) {
+        margin-right: $paddingSmd;
+      }
+    }
+
+    &.size-large {
+      &>*:not(:last-child) {
+        margin-right: $paddingMd;
+      }
+    }
+
+    &.size-no-space {
+      &>*:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+
+    &.size-extra-large {
+      &>*:not(:last-child) {
+        margin-right: $paddingXl;
+      }
+    }
+  }
+
+  &.vertical {
+    flex-direction: column;
+
+    &.size-extra-small {
+      &>*:not(:last-child) {
+        margin-bottom: $paddingXsm;
+      }
+    }
+
+    &.size-small {
+      &>*:not(:last-child) {
+        margin-bottom: $paddingSm;
+      }
+    }
+
+    &.size-middle {
+      &>*:not(:last-child) {
+        margin-bottom: $paddingSmd;
+      }
+    }
+
+    &.size-large {
+      &>*:not(:last-child) {
+        margin-bottom: $paddingMd;
+      }
+    }
+
+    &.size-no-space {
+      &>*:not(:last-child) {
+        margin-bottom: 0;
+      }
+    }
+
+    &.size-extra-large {
+      &>*:not(:last-child) {
+        margin-bottom: $paddingXl;
+      }
+    }
+  }
+}

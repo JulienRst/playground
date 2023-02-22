@@ -1,0 +1,71 @@
+@import 'ui/variables.module.scss';
+
+.container {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: 0.3s;
+  outline: none;
+  cursor: pointer;
+
+  &.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transition: 0.3s;
+
+    .title::after {
+      height: 50%;
+    }
+
+    .more {
+      opacity: 1;
+    }
+  }
+
+  .key {
+    align-self: flex-start;
+  }
+
+  .title {
+    align-self: center;
+    font-size: 5rem;
+    line-height: 5rem;
+    // font-weight: bold;
+    text-transform: uppercase;
+    margin: 0.5rem;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    position: relative;
+    font-family: $fontTitle;
+    letter-spacing: 4px;
+    -webkit-font-smoothing: antialiased;
+
+    &::after {
+      content: attr(data-text);
+      position: absolute;
+      width: 100%;
+      height: 0%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      color: white;
+      transition: 0.3s;
+      overflow: hidden;
+    }
+  }
+
+  .more {
+    position: absolute;
+    bottom: 0%;
+    left: 100%;
+    width: 100%;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+}
