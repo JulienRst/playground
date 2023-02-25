@@ -1,5 +1,5 @@
-import AboutMeButton from 'business/about-me/components/cta';
-import ProjectList from 'business/home/components/projectList';
+import AboutMeButton from 'business/aboutMe/components/cta';
+import ExperienceList from 'business/home/components/experienceList';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import useTimeout from 'technical/window/hooks/useTimeout';
@@ -14,7 +14,7 @@ const HomePage: React.FC = () => {
   }, 300);
   return (
     <Page>
-      <ProjectList active={isActive} />
+      <ExperienceList active={isActive} />
       <AboutMeButton
         className={classNames(styles.aboutMe, { [styles.active]: isActive })}
       />

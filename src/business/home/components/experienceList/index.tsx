@@ -1,19 +1,23 @@
-import useProjectList from 'business/project/services/hooks/projectList';
+import useExperienceList from 'business/sandbox/services/hooks/experienceList';
 import React, { PropsWithChildren } from 'react';
 import Spacer from 'ui/spacer';
-import ProjectItem from '../projectItem';
+import ExperienceItem from '../experienceItem';
 
 interface ProjectListProps extends PropsWithChildren {
   active: boolean;
 }
 
 const ProjectList: React.FC<ProjectListProps> = ({ active }) => {
-  const projects = useProjectList();
+  const experiences = useExperienceList();
 
   return (
     <Spacer direction="vertical" justify="center">
-      {projects.map((project) => (
-        <ProjectItem key={project.id} project={project} active={active} />
+      {experiences.map((experience) => (
+        <ExperienceItem
+          key={experience.id}
+          experience={experience}
+          active={active}
+        />
       ))}
     </Spacer>
   );

@@ -12,7 +12,7 @@ interface Informations {
   source: string;
 }
 
-export default interface RawProject {
+export default interface RawExperience {
   id: number;
   name: string;
   component: ReactElement;
