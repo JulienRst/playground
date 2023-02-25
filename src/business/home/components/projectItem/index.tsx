@@ -7,12 +7,13 @@ import styles from './index.module.scss';
 
 interface ProjectItemProps {
   project: Project;
+  active: boolean;
 }
 
-const ProjectItem: React.FC<ProjectItemProps> = ({ project }) => {
+const ProjectItem: React.FC<ProjectItemProps> = ({ project, active }) => {
   return (
     <Spacer
-      className={classNames(styles.container, styles.active)}
+      className={classNames(styles.container, { [styles.active]: active })}
       direction="horizontal"
     >
       <Typography className={styles.key}>{project.id}</Typography>

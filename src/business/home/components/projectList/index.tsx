@@ -3,15 +3,17 @@ import React, { PropsWithChildren } from 'react';
 import Spacer from 'ui/spacer';
 import ProjectItem from '../projectItem';
 
-interface ProjectListProps extends PropsWithChildren {}
+interface ProjectListProps extends PropsWithChildren {
+  active: boolean;
+}
 
-const ProjectList: React.FC<ProjectListProps> = () => {
+const ProjectList: React.FC<ProjectListProps> = ({ active }) => {
   const projects = useProjectList();
 
   return (
     <Spacer direction="vertical" justify="center">
       {projects.map((project) => (
-        <ProjectItem key={project.id} project={project} />
+        <ProjectItem key={project.id} project={project} active={active} />
       ))}
     </Spacer>
   );

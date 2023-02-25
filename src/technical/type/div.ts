@@ -1,3 +1,6 @@
-type Div = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+type Div<T = HTMLDivElement> = React.DetailedHTMLProps<
+  React.HTMLAttributes<T>,
+  T
+>;
 
 export default Div;

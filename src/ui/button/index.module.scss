@@ -1,0 +1,15 @@
+@import 'ui/variables.module.scss';
+
+.button {
+  padding: 2rem 4rem;
+  background-color: $surfaceBackground;
+  color: $surfaceText;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-top: 1px solid $surfaceBackground;
+  border-left: 1px solid $surfaceBackground;
+  position: relative;
+  z-index: 10;
+  transition: 0.3s;
+}

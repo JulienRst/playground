@@ -1,0 +1,16 @@
+.aboutMe {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translateX(calc(100% + 1px));
+
+  &.active {
+    transform: translateX(0);
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateX(10px);
+      transition: 0.3s;
+    }
+  }
+}
