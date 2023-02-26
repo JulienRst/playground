@@ -14,6 +14,10 @@ body {
   box-sizing: border-box;
 }
 
-a:visited {
-  color: $textColor;
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: $textColor;
+  }
 }

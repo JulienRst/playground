@@ -8,14 +8,17 @@ import styles from './index.module.scss';
 interface ExperienceItemProps {
   experience: Experience;
   active: boolean;
+  onClick: (slug: string) => void;
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
   experience,
   active,
+  onClick,
 }) => {
   return (
     <Spacer
+      onClick={() => onClick(experience.slug)}
       className={classNames(styles.container, { [styles.active]: active })}
       direction="horizontal"
     >

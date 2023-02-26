@@ -16,18 +16,18 @@ const AboutMePage: React.FC = () => {
 
   useTimeout(() => {
     setIsActive(true);
-  }, 300);
+  }, 0);
 
   const back = () => {
     setIsActive(false);
     window.setTimeout(() => {
       navigate(Routes.Home);
-    }, 250);
+    }, 300);
   };
 
   return (
     <>
-      <BackButton back={back} active={isActive} />
+      <BackButton back={back} active={isActive} size="small" />
       <Page className={classNames(styles.about, { [styles.active]: isActive })}>
         <section>
           <article>

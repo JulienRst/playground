@@ -1,6 +1,7 @@
-import { useFrame } from '@react-three/fiber';
-import React, { useRef } from 'react';
-import { Group } from 'three';
+import { PerspectiveCamera } from '@react-three/drei';
+import { useFrame, useThree } from '@react-three/fiber';
+import React, { useLayoutEffect, useRef } from 'react';
+import { Group, Vector3 } from 'three';
 import Cube from './components/cube';
 import { calcDistFromIndex } from './services/calcDistFromIndex';
 import { easeInOut } from './services/easeInOut';
@@ -23,6 +24,11 @@ const InfiniteCube: React.FC<InfiniteCubeProps> = ({
   const frameRate = 1000 / 80;
   const group = useRef<Group>(null);
   const cubeDatas = initCubeData(numberPerSide, cubeSize);
+  const { camera } = useThree();
+
+  useLayoutEffect(() => {
+    camera.lookAt(new Vector3(0, 0, 0));
+  });
 
   useFrame(() => {
     if (group.current) {
@@ -54,11 +60,14 @@ const InfiniteCube: React.FC<InfiniteCubeProps> = ({
   });
 
   return (
-    <group ref={group}>
-      {cubeDatas.map((cubeData, index) => (
-        <Cube key={index} {...cubeData} />
-      ))}
-    </group>
+    <>
+      <PerspectiveCamera makeDefault position={[0, 4, 8]} />
+      <group ref={group}>
+        {cubeDatas.map((cubeData, index) => (
+          <Cube key={index} {...cubeData} />
+        ))}
+      </group>
+    </>
   );
 };
 
