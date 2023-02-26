@@ -12,6 +12,7 @@ const HomePage: React.FC = () => {
   useTimeout(() => {
     setIsActive(true);
   }, 300);
+
   return (
     <Page>
       <ExperienceList active={isActive} />

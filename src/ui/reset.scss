@@ -7,4 +7,13 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: $background;
+  font-size: 10pt;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a:visited {
+  color: $textColor;
 }

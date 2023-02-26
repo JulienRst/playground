@@ -1,0 +1,56 @@
+@import 'ui/variables.module.scss';
+
+.about {
+  padding-top: 4rem;
+  padding-left: 10rem;
+
+  &.active {
+    section {
+      width: 100%;
+      padding-right: 1rem;
+      transition: 0.3s;
+    }
+  }
+
+  section {
+    width: 0px;
+    transition: 0.3s;
+    overflow: hidden;
+
+    article {
+      max-width: 350px;
+      width: calc(100vw - 10rem - 2rem);
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      padding-left: 1rem;
+
+      p {
+        margin-top: 0;
+      }
+
+      strong {
+        a {
+          text-decoration: underline;
+        }
+      }
+
+      .ctnSocials {
+        align-items: center;
+
+        a {
+          display: block;
+
+          img {
+            width: 3rem;
+          }
+
+          &:first-child {
+            img {
+              width: 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

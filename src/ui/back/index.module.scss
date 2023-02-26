@@ -1,0 +1,132 @@
+.back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+  transform: none;
+  width: 0rem;
+  height: 4rem;
+  overflow: hidden;
+  padding: 0;
+
+  &.active {
+    width: 10rem;
+    transition: 0.3s;
+  }
+
+  &:hover {
+    transform: translate(-2rem, 0rem);
+    transition: 0.3s;
+  }
+
+  .mainStroke {
+    position: absolute;
+    height: 2px;
+    width: 40%;
+    background-color: #101010;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .smallStroke {
+    position: absolute;
+    height: 2px;
+    width: 7%;
+    background-color: #101010;
+    top: 50%;
+    left: calc((100% - 40%) / 2);
+    transform-origin: left;
+    transform: translate(-4px, -1px) rotate(45deg);
+
+    &:nth-child(2) {
+      transform: translate(-4px, 1px) rotate(-45deg);
+    }
+  }
+}
+
+// .back-button {
+//   width: 20rem;
+//   height: 8rem;
+//   background-color: white;
+//   cursor: pointer;
+//   position: relative;
+//   transform: translate(0, 0);
+//   transition: width 0.3s 0.5s, transform 0.5s;
+
+//   .main-stroke {
+//     position: absolute;
+//     height: 4px;
+//     width: 40%;
+//     background-color: #101010;
+//     top: 50%;
+//     left: 50%;
+//     transform: translateX(-50%);
+//   }
+
+//   .small-stroke {
+//     position: absolute;
+//     height: 4px;
+//     width: 7%;
+//     background-color: #101010;
+//     top: 50%;
+//     left: calc((100% - 40%) / 2);
+//     transform-origin: left;
+//     transform: translate(-4px, -1px) rotate(45deg);
+
+//     &:nth-child(2) {
+//       transform: translate(-4px, 1px) rotate(-45deg);
+//     }
+//   }
+
+//   &:hover {
+//     transform: translate(-2rem, 0rem);
+//     transition: 0.5s;
+//   }
+// }
+
+// @media (max-width: 600px) {
+//   .back-button {
+//     width: 10rem;
+//     height: 4rem;
+
+//     .main-stroke {
+//       height: 2px;
+//     }
+
+//     .small-stroke {
+//       height: 2px;
+//       transform: translate(-2px, -0.5px) rotate(45deg);
+
+//       &:nth-child(2) {
+//         transform: translate(-2px, 0.5px) rotate(-45deg);
+//       }
+//     }
+//   }
+// }
+
+// // .backButton {
+// //   position: absolute;
+// //   width: 0rem;
+// //   height: 4rem;
+// //   top: 0;
+// //   left: 0;
+
+// //   &.active {
+// //     width: 10rem;
+// //     transition: 0.3s;
+// //   }
+
+// //   .mainStroke {
+// //     height: 2px;
+// //   }
+
+// //   .smallStroke {
+// //     height: 2px;
+// //     transform: translate(-2px, -0.5px) rotate(45deg);
+
+// //     &:nth-child(2) {
+// //       transform: translate(-2px, 0.5px) rotate(-45deg);
+// //     }
+// //   }
+// // }
