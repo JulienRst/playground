@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import React, { PropsWithChildren } from 'react';
-import Div from 'technical/type/div';
+import ReactHTMLElement from 'technical/type/reactHTMLElement';
 import Spacer from 'ui/spacer';
 import styles from './index.module.scss';
 
-interface PageProps extends PropsWithChildren, Div {}
+interface PageProps extends PropsWithChildren, ReactHTMLElement {}
 
 const Page: React.FC<PageProps> = ({ children, className, ...props }) => {
   return (

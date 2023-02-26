@@ -11,15 +11,9 @@
 
     .ctnRender {
       .render {
-        opacity: 1;
         transform: translate(0, 0);
+        transition: 0.3s;
       }
-    }
-
-    .moreInfo {
-      transform: translate(0, 0);
-      transition-delay: 0.3s;
-      transition-duration: 0.5s;
     }
   }
 
@@ -29,7 +23,6 @@
     background-color: #101010;
 
     .render {
-      opacity: 0;
       width: calc(100vw - 4rem);
       height: calc(100vh - 4rem);
       transform: translate(2rem, 2rem);
@@ -39,31 +32,26 @@
     }
   }
 
-  // h1 {
-  //   text-align: center;
-  //   font-family: 'Titilium';
-  //   position: absolute;
-  //   font-size: 5rem;
-  //   text-transform: uppercase;
-  //   color: white;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   z-index: 8000;
-  // }
-
-  .backButton {
+  .title {
+    text-align: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8000;
   }
+}
 
-  .moreInfo {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    transform: translate(100%, 100%);
+.moreInfo {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transform: translate(100%, 100%);
+  transition-delay: 0.3s;
+  transition-duration: 0.5s;
+
+  &.active {
+    transform: translate(0, 0);
     transition-delay: 0.3s;
     transition-duration: 0.5s;
   }

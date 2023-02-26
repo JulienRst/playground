@@ -1,0 +1,114 @@
+@import 'ui/variables.module.scss';
+
+.moreInfo {
+  width: 6rem;
+  height: 6rem;
+  transition: 0.3s;
+  background-color: rgba($background, 0.8);
+  z-index: 10000;
+  position: relative;
+
+  &.open {
+    width: 50vw;
+    height: 100vh;
+    transition: 0.3s;
+
+    .button {
+      .smallStroke {
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: 0.3s;
+
+        &:nth-child(1) {
+          transform: translate(-50%, -50%) rotate(135deg);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  .button {
+    width: 6rem;
+    height: 6rem;
+    background-color: white;
+    padding: 1.5rem;
+    position: relative;
+    cursor: pointer;
+
+    .smallStroke {
+      width: calc(100% - 4rem);
+      height: 4px;
+      background-color: #101010;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: 0.3s;
+
+      &:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(90deg);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .ctnInformations {
+    color: white;
+    padding: 1rem;
+
+    .date {
+      font-style: italic;
+    }
+
+    .block {
+      padding: 1rem 0;
+
+      .label {
+        font-weight: bold;
+        font-size: 1.8rem;
+      }
+
+      .items {
+        .item {
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+
+          a.link {
+            font-style: italic;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+
+    .source {
+      margin-top: 8rem;
+
+      a.link {
+        img {
+          width: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .moreInfo {
+    width: 4rem;
+    height: 4rem;
+
+    .button {
+      width: 4rem;
+      height: 4rem;
+
+      .smallStroke {
+        width: 50%;
+        height: 2px;
+      }
+    }
+  }
+}

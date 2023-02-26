@@ -1,8 +1,8 @@
 import React from 'react';
-import Div from 'technical/type/div';
+import ReactHTMLElement from 'technical/type/reactHTMLElement';
 import Button from 'ui/button';
 
-interface AboutMeButtonProps extends Div<HTMLButtonElement> {
+interface AboutMeButtonProps extends ReactHTMLElement<HTMLButtonElement> {
   goToAboutMe: () => void;
 }
 const AboutMeButton: React.FC<AboutMeButtonProps> = ({

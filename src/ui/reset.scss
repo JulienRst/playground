@@ -16,8 +16,9 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 
   &:visited {
-    color: $textColor;
+    color: inherit;
   }
 }

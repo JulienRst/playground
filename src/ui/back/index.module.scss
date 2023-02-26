@@ -1,3 +1,5 @@
+@import 'ui/variables.module.scss';
+
 .back {
   position: fixed;
   top: 0;
@@ -23,7 +25,7 @@
     position: absolute;
     height: 4px;
     width: 40%;
-    background-color: #101010;
+    background-color: $surfaceText;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -33,7 +35,7 @@
     position: absolute;
     height: 4px;
     width: 7%;
-    background-color: #101010;
+    background-color: $surfaceText;
     top: 50%;
     left: calc((100% - 40%) / 2);
     transform-origin: left;
@@ -51,9 +53,17 @@
       width: 10rem;
     }
 
-    .mainStroke,
+    .mainStroke {
+      height: 2px;
+    }
+
     .smallStroke {
       height: 2px;
+      transform: translate(-2px, -0.5px) rotate(45deg);
+
+      &:nth-child(2) {
+        transform: translate(-2px, 0.5px) rotate(-45deg);
+      }
     }
   }
 }

@@ -15,7 +15,7 @@ const ExperienceList: React.FC<ExperienceListProps> = ({
   const experiences = useExperienceList();
 
   return (
-    <Spacer direction="vertical" justify="center">
+    <Spacer direction="vertical" justify="center" align="start">
       {experiences.map((experience) => (
         <ExperienceItem
           onClick={goToExperience}

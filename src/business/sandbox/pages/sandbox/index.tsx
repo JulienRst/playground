@@ -7,12 +7,15 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useTimeout from 'technical/window/hooks/useTimeout';
 import BackButton from 'ui/back';
 import Page from 'ui/layout/page';
+import Typography from 'ui/typography';
+import MoreInfo from './components/moreInfo';
 import styles from './index.module.scss';
 
 type SandboxParams = 'slug';
 
 const SandboxPage: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
+  const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
   const navigate = useNavigate();
   const { slug } = useParams<SandboxParams>();
 
@@ -29,6 +32,11 @@ const SandboxPage: React.FC = () => {
     }, 300);
   };
 
+  if (!experience) {
+    // @todo : Create propper 404
+    return <>404</>;
+  }
+
   return (
     <>
       <BackButton back={back} active={isActive} />
@@ -36,9 +44,20 @@ const SandboxPage: React.FC = () => {
         className={classNames(styles.viewer, { [styles.active]: isActive })}
       >
         <div className={styles.ctnRender}>
-          <Canvas>{isActive ? experience?.component : null}</Canvas>
+          {experience.isTitleNeeded && !isMoreInfoOpen ? (
+            <Typography.Title className={styles.title}>
+              {experience.name}
+            </Typography.Title>
+          ) : null}
+          <Canvas className={styles.render}>{experience.component}</Canvas>
         </div>
       </Page>
+      <MoreInfo
+        isOpen={isMoreInfoOpen}
+        toggle={setIsMoreInfoOpen}
+        experience={experience}
+        className={classNames(styles.moreInfo, { [styles.active]: isActive })}
+      />
     </>
   );
 };

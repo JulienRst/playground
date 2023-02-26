@@ -1,0 +1,21 @@
+@import 'ui/variables.module.scss';
+
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title {
+  font-family: 'Titilium';
+  text-transform: uppercase;
+  color: $textColor;
+  margin: 0;
+  padding: 0;
+}
+
+h1.title {
+  font-size: 5rem;
+}
+
+h2.title {
+  font-size: 3rem;
+}

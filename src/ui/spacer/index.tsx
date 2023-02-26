@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import React from 'react';
-import Div from 'technical/type/div';
+import ReactHTMLElement from 'technical/type/reactHTMLElement';
 import styles from './index.module.scss';
 
-interface SpaceProps extends Div {
+interface SpaceProps extends ReactHTMLElement {
   direction?: 'vertical' | 'horizontal';
   size?:
     | 'extra-small'

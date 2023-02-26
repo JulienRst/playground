@@ -7,6 +7,8 @@ import { calcDistFromIndex } from './services/calcDistFromIndex';
 import { easeInOut } from './services/easeInOut';
 import { initCubeData } from './services/initCubeData';
 
+const PHI = 0.02;
+
 interface InfiniteCubeProps {
   numberPerSide?: number;
   cubeSize?: number;
@@ -17,14 +19,12 @@ interface InfiniteCubeProps {
 const InfiniteCube: React.FC<InfiniteCubeProps> = ({
   numberPerSide = 13,
   cubeSize = 0.4,
-  loopDuration = 1500,
+  loopDuration = 2,
   offset = 4,
 }) => {
-  let currentTime = 0;
-  const frameRate = 1000 / 80;
   const group = useRef<Group>(null);
   const cubeDatas = initCubeData(numberPerSide, cubeSize);
-  const { camera } = useThree();
+  const { camera, clock } = useThree();
 
   useLayoutEffect(() => {
     camera.lookAt(new Vector3(0, 0, 0));
@@ -32,22 +32,23 @@ const InfiniteCube: React.FC<InfiniteCubeProps> = ({
 
   useFrame(() => {
     if (group.current) {
-      currentTime += frameRate;
-      if (currentTime >= loopDuration) {
-        currentTime = 0;
+      const time = clock.getElapsedTime() % loopDuration;
+      const timeDist = time / loopDuration;
+
+      if (time < 0 + PHI) {
         group.current.position.y = 0;
         group.current.children.forEach((cube) => {
           cube.position.y = 0;
         });
       }
+
       group.current.children.forEach((cube, i) => {
         const ratioDist =
           calcDistFromIndex(i, numberPerSide) /
           calcDistFromIndex(numberPerSide * numberPerSide, numberPerSide);
-        const timeDist = currentTime / loopDuration;
         if (ratioDist < timeDist) {
           cube.position.y = easeInOut(
-            currentTime - ratioDist * loopDuration,
+            time - ratioDist * loopDuration,
             0,
             offset,
             loopDuration - ratioDist * loopDuration,
@@ -55,7 +56,7 @@ const InfiniteCube: React.FC<InfiniteCubeProps> = ({
         }
       });
       group.current.rotation.y -= 0.005;
-      group.current.position.y -= offset / (loopDuration / frameRate);
+      group.current.position.y = -offset * timeDist;
     }
   });
 
