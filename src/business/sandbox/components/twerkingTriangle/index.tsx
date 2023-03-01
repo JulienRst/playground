@@ -14,7 +14,7 @@ interface TwerkingTriangleProps {
 const TwerkingTriangle: React.FC<TwerkingTriangleProps> = ({
   loopDuration = 500,
   triangleSize = 6,
-  triangleCount = 24,
+  triangleCount = 18,
   maxDegreeAngle = 150,
   frameRate = 1000 / 60,
 }) => {

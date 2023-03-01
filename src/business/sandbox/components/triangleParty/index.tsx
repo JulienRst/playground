@@ -1,3 +1,4 @@
+import { PerspectiveCamera } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import React, { useState, useRef } from 'react';
 import { Group, Vector3 } from 'three';
@@ -12,7 +13,7 @@ interface TrianglePartyProps {
 
 const TriangleParty: React.FC<TrianglePartyProps> = ({
   numberOfPoints = 30,
-  delay = 300,
+  delay = 200,
   size = 5,
 }) => {
   const group = useRef<Group>(null);
@@ -34,18 +35,22 @@ const TriangleParty: React.FC<TrianglePartyProps> = ({
   useFrame(() => {
     if (group.current) {
       group.current.rotation.y += 0.005;
+      group.current.rotation.z += 0.005;
     }
   });
 
   return (
-    <group ref={group}>
-      <ambientLight color={0xffffff} />
-      {points.length > 2 &&
-        points.map((point, i) => {
-          const trianglePoints = [point, points[i - 1], points[i - 2], point];
-          return i < 2 ? null : <Triangle key={i} points={trianglePoints} />;
-        })}
-    </group>
+    <>
+      <PerspectiveCamera makeDefault position={new Vector3(0, 0, 15)} />
+      <group ref={group}>
+        <ambientLight color={0xffffff} />
+        {points.length > 2 &&
+          points.map((point, i) => {
+            const trianglePoints = [point, points[i - 1], points[i - 2], point];
+            return i < 2 ? null : <Triangle key={i} points={trianglePoints} />;
+          })}
+      </group>
+    </>
   );
 };
 

@@ -4,7 +4,7 @@ import useExperience from 'business/sandbox/services/hooks/experience';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import useTimeout from 'technical/window/hooks/useTimeout';
+// import useTimeout from 'technical/window/hooks/useTimeout';
 import BackButton from 'ui/back';
 import Page from 'ui/layout/page';
 import Typography from 'ui/typography';
@@ -21,9 +21,9 @@ const SandboxPage: React.FC = () => {
 
   const experience = useExperience(slug);
 
-  useTimeout(() => {
-    setIsActive(true);
-  }, 0);
+  // useTimeout(() => {
+  //   setIsActive(true);
+  // }, 0);
 
   const back = () => {
     setIsActive(false);
@@ -49,7 +49,9 @@ const SandboxPage: React.FC = () => {
               {experience.name}
             </Typography.Title>
           ) : null}
-          <Canvas className={styles.render}>{experience.component}</Canvas>
+          <Canvas onCreated={() => setIsActive(true)} className={styles.render}>
+            {experience.component}
+          </Canvas>
         </div>
       </Page>
       <MoreInfo

@@ -7,7 +7,7 @@ import { calcDistFromIndex } from './services/calcDistFromIndex';
 import { easeInOut } from './services/easeInOut';
 import { initCubeData } from './services/initCubeData';
 
-const PHI = 0.02;
+const PHI = 0.04;
 
 interface InfiniteCubeProps {
   numberPerSide?: number;
