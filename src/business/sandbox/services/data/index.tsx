@@ -1,7 +1,8 @@
 import Dimensions from 'business/sandbox/components/dimensions';
-import InfiniteCube from 'business/sandbox/components/infiniteCube';
-import TriangleParty from 'business/sandbox/components/triangleParty';
-import TwerkingTriangle from 'business/sandbox/components/twerkingTriangle';
+import InfiniteCube from 'business/sandbox/components/infinite-cube';
+import RoadLight from 'business/sandbox/components/road-light';
+import TriangleParty from 'business/sandbox/components/triangle-party';
+import TwerkingTriangle from 'business/sandbox/components/twerking-triangle';
 import RawExperience from 'business/sandbox/types/raw';
 
 const RAW_EXPERIENCES: RawExperience[] = [
@@ -60,6 +61,18 @@ const RAW_EXPERIENCES: RawExperience[] = [
           name: 'Matt DesLauriers',
         },
       ],
+      source: 'https://github.com/JulienRst/Playgournd/blob/master/',
+    },
+  },
+  {
+    id: 5,
+    name: 'Road Light',
+    component: <RoadLight />,
+    isTitleNeeded: false,
+    informations: {
+      date: new Date(2021, 4),
+      technos: ['React', 'Three.js'],
+      inspirations: [],
       source: 'https://github.com/JulienRst/Playgournd/blob/master/',
     },
   },

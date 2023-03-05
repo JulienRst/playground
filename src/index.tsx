@@ -10,8 +10,10 @@ if (!rootElem) {
 
 const root = ReactDOM.createRoot(rootElem);
 
-root.render(
-  // <React.StrictMode>
-  <App />,
-  // </React.StrictMode>,
-);
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>,
+// );
+
+root.render(<App />);

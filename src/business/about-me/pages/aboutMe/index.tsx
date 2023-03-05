@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Page from 'ui/layout/page';
 import Images from 'ui/images';
 import styles from './index.module.scss';
-import useTimeout from 'technical/window/hooks/useTimeout';
+import useTimeout from 'technical/window/hooks/use-timeout';
 import classNames from 'classnames';
 import Typography from 'ui/typography';
 import Spacer from 'ui/spacer';

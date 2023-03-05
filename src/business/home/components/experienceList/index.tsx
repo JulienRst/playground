@@ -1,4 +1,4 @@
-import useExperienceList from 'business/sandbox/services/hooks/experienceList';
+import useExperienceList from 'business/sandbox/services/hooks/experience-list';
 import React, { PropsWithChildren } from 'react';
 import Spacer from 'ui/spacer';
 import ExperienceItem from '../experienceItem';

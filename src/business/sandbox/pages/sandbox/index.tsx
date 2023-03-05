@@ -4,7 +4,9 @@ import useExperience from 'business/sandbox/services/hooks/experience';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-// import useTimeout from 'technical/window/hooks/useTimeout';
+import LastMouseEventContext, {
+  LastMouseEvent,
+} from 'technical/three-fiber/context/mouse-events';
 import BackButton from 'ui/back';
 import Page from 'ui/layout/page';
 import Typography from 'ui/typography';
@@ -15,15 +17,14 @@ type SandboxParams = 'slug';
 
 const SandboxPage: React.FC = () => {
   const [isActive, setIsActive] = useState(false);
+  const [lastMouseEvent, setLastMouseEvent] = useState<LastMouseEvent | null>(
+    null,
+  );
   const [isMoreInfoOpen, setIsMoreInfoOpen] = useState(false);
   const navigate = useNavigate();
   const { slug } = useParams<SandboxParams>();
 
   const experience = useExperience(slug);
-
-  // useTimeout(() => {
-  //   setIsActive(true);
-  // }, 0);
 
   const back = () => {
     setIsActive(false);
@@ -38,7 +39,7 @@ const SandboxPage: React.FC = () => {
   }
 
   return (
-    <>
+    <LastMouseEventContext.Provider value={lastMouseEvent}>
       <BackButton back={back} active={isActive} />
       <Page
         className={classNames(styles.viewer, { [styles.active]: isActive })}
@@ -49,7 +50,14 @@ const SandboxPage: React.FC = () => {
               {experience.name}
             </Typography.Title>
           ) : null}
-          <Canvas onCreated={() => setIsActive(true)} className={styles.render}>
+          <Canvas
+            onMouseDown={(event) =>
+              setLastMouseEvent({ type: 'mousedown', event })
+            }
+            onMouseUp={(event) => setLastMouseEvent({ type: 'mouseup', event })}
+            onCreated={() => setIsActive(true)}
+            className={styles.render}
+          >
             {experience.component}
           </Canvas>
         </div>
@@ -60,7 +68,7 @@ const SandboxPage: React.FC = () => {
         experience={experience}
         className={classNames(styles.moreInfo, { [styles.active]: isActive })}
       />
-    </>
+    </LastMouseEventContext.Provider>
   );
 };
 

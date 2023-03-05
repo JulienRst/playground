@@ -1,4 +1,4 @@
-import formatExperienceDate from 'business/sandbox/services/format/formatExperienceDate';
+import formatExperienceDate from 'business/sandbox/services/format/format-experience-date';
 import Experience from 'business/sandbox/types';
 import classNames from 'classnames';
 import React from 'react';

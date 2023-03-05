@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import useExperienceList from 'business/sandbox/services/hooks/experienceList';
+import useExperienceList from 'business/sandbox/services/hooks/experience-list';
 import Experience from 'business/sandbox/types';
 
 export default function useExperience(slug: string | undefined) {

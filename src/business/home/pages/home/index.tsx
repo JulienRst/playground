@@ -1,10 +1,10 @@
-import AboutMeButton from 'business/aboutMe/components/cta';
+import AboutMeButton from 'business/about-me/components/cta';
 import ExperienceList from 'business/home/components/experienceList';
 import Routes from 'business/router/routes';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { generatePath, useNavigate } from 'react-router-dom';
-import useTimeout from 'technical/window/hooks/useTimeout';
+import useTimeout from 'technical/window/hooks/use-timeout';
 import Page from 'ui/layout/page';
 import styles from './index.module.scss';
 
