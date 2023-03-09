@@ -12,6 +12,7 @@ import Page from 'ui/layout/page';
 import Typography from 'ui/typography';
 import MoreInfo from './components/moreInfo';
 import styles from './index.module.scss';
+import 'technical/three-fiber/extend';
 
 type SandboxParams = 'slug';
 
