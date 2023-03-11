@@ -1,16 +1,15 @@
-import { useFrame, useLoader, useThree } from '@react-three/fiber';
+import { useFrame, useLoader } from '@react-three/fiber';
 import React, { useLayoutEffect, useRef } from 'react';
 import * as THREE from 'three';
 import createRoundedRect from './services/create-rounded-rect';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-import { PerspectiveCamera } from '@react-three/drei';
-import { camera, scene, box } from './services/card-content';
+import { PerspectiveCamera, RenderTexture } from '@react-three/drei';
+import InnerCard from './components/innerCard';
 
 const baseShape = createRoundedRect(-2, -3, 4, 6, 0.25);
 const encartShape = createRoundedRect(1.25, -1, 0.75, 0.75, 0.25);
 
 const Inceptcard: React.FC = () => {
-  const renderTarget = new THREE.WebGLRenderTarget(2048, 2048);
   const font = useLoader(FontLoader, '/fonts/Lato_Bold.json');
   const pointLightRef = useRef<THREE.PointLight>(null);
   const cardRef = useRef<THREE.Group>(null);
@@ -19,14 +18,7 @@ const Inceptcard: React.FC = () => {
     pointLightRef.current?.lookAt(new THREE.Vector3(0, 0, 0));
   });
 
-  const { gl } = useThree();
-
   useFrame(() => {
-    gl.setRenderTarget(renderTarget);
-    gl.render(scene, camera);
-    gl.setRenderTarget(null);
-    box.rotation.x += 0.01;
-    box.rotation.y += 0.01;
     if (cardRef.current) {
       cardRef.current.rotation.y += 0.02;
     }
@@ -49,7 +41,11 @@ const Inceptcard: React.FC = () => {
         </mesh>
         <mesh position={[0, 1, 0.001]}>
           <planeGeometry args={[3.5, 3.5]} />
-          <meshBasicMaterial map={renderTarget.texture} />
+          <meshStandardMaterial>
+            <RenderTexture attach="map">
+              <InnerCard />
+            </RenderTexture>
+          </meshStandardMaterial>
         </mesh>
         <mesh position={[0, 0, 0.002]}>
           <shapeGeometry args={[encartShape]} />
