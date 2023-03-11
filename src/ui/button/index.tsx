@@ -8,6 +8,7 @@ interface ButtonProps
     ReactHTMLElement<HTMLButtonElement> {}
 
 const Button: React.FC<ButtonProps> = ({ children, className, ...props }) => {
+  console.log(className);
   return (
     <button className={classNames(styles.button, className)} {...props}>
       {children}

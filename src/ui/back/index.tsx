@@ -16,13 +16,13 @@ const BackButton: React.FC<BackButtonProps> = ({
 }) => {
   const isMobile = useIsMobile();
 
+  const computedSize = isMobile ? styles.small : styles[size];
+
   return (
     <Button
       onClick={back}
-      className={classNames(styles.back, {
+      className={classNames(styles.back, computedSize, {
         [styles.active]: active,
-        [styles[size]]: !isMobile,
-        [styles.small]: isMobile,
       })}
     >
       <div className={styles.mainStroke}></div>
