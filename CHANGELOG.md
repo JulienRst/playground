@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/JulienRst/playground/compare/v0.1.0...v0.1.1) (2023-03-11)
+
+
+### Bug Fixes
+
+* **about:** fix button size on about page ([8c081c9](https://github.com/JulienRst/playground/commit/8c081c94cada0e3f67af55a184c714d5618f9ecd))
+
 ## 0.1.0 (2023-03-11)
 
 
