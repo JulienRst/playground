@@ -1,7 +1,9 @@
 import useExperienceList from 'business/sandbox/services/hooks/experience-list';
 import React, { PropsWithChildren } from 'react';
+import { useIsMobile } from 'technical/window/hooks/use-window-size';
 import Spacer from 'ui/spacer';
 import ExperienceItem from '../experienceItem';
+import styles from './index.module.scss';
 
 interface ExperienceListProps extends PropsWithChildren {
   active: boolean;
@@ -13,9 +15,15 @@ const ExperienceList: React.FC<ExperienceListProps> = ({
   goToExperience,
 }) => {
   const experiences = useExperienceList();
+  const isMobile = useIsMobile();
 
   return (
-    <Spacer direction="vertical" justify="center" align="start">
+    <Spacer
+      className={styles.experienceList}
+      direction="vertical"
+      justify={isMobile ? 'start' : 'center'}
+      align="start"
+    >
       {experiences.map((experience) => (
         <ExperienceItem
           onClick={goToExperience}

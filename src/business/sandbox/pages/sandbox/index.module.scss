@@ -3,7 +3,7 @@
 .viewer {
   padding: 0;
   transition: 0.3s;
-  background-color: $surfaceBackground;
+  background-color: $surface-background;
 
   &.active {
     padding: 2rem;
@@ -43,6 +43,31 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 8000;
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    .ctnRender {
+      .render {
+        width: calc(100vw - 2rem);
+        height: calc(100vh - 2rem);
+        transform: translate(1rem, 1rem);
+      }
+    }
+
+    h1 {
+      font-size: 15vw;
+    }
+
+    &.active {
+      padding: 1rem;
+
+      .ctnRender {
+        .render {
+          width: calc(100vw - 2rem);
+          height: calc(100vh - 2rem);
+        }
+      }
+    }
   }
 }
 

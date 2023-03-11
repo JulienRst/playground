@@ -1,0 +1,7 @@
+@import 'ui/variables.module.scss';
+
+.experienceList {
+  @media(max-width: $mobile-breakpoint) {
+    padding: 2rem;
+  }
+}

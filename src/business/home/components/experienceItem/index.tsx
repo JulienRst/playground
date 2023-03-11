@@ -11,6 +11,10 @@ interface ExperienceItemProps {
   onClick: (slug: string) => void;
 }
 
+function transformExperienceId(id: number) {
+  return ('0' + id).slice(-2);
+}
+
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
   experience,
   active,
@@ -22,7 +26,9 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
       className={classNames(styles.container, { [styles.active]: active })}
       direction="horizontal"
     >
-      <Typography className={styles.key}>{experience.id}</Typography>
+      <Typography className={styles.key}>
+        {transformExperienceId(experience.id)}
+      </Typography>
       <Typography data-text={experience.name} className={styles.title}>
         {experience.name}
       </Typography>

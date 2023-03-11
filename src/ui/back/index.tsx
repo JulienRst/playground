@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { useIsMobile } from 'technical/window/hooks/use-window-size';
 import Button from 'ui/button';
 import styles from './index.module.scss';
 
@@ -13,11 +14,15 @@ const BackButton: React.FC<BackButtonProps> = ({
   size = 'big',
   back,
 }) => {
+  const isMobile = useIsMobile();
+
   return (
     <Button
       onClick={back}
-      className={classNames(styles.back, styles[size], {
+      className={classNames(styles.back, {
         [styles.active]: active,
+        [styles[size]]: !isMobile,
+        [styles.small]: isMobile,
       })}
     >
       <div className={styles.mainStroke}></div>

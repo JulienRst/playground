@@ -8,22 +8,32 @@ $white: #ffffff;
 // Intentions
 //
 $background: $black;
-$textColor: $white;
-$surfaceBackground: $white;
-$surfaceText: $black;
+$text-color: $white;
+$surface-background: $white;
+$surface-text: $black;
 
 //
 // Fonts
 //
-$fontTitle: 'Titilium', Arial, Helvetica, sans-serif;
-$fontBody: 'Noto Sans', Arial, Helvetica, sans-serif;
+$font-title: 'Titilium', Arial, Helvetica, sans-serif;
+$font-body: 'Noto Sans', Arial, Helvetica, sans-serif;
 
 // 
 //  Spacing
 // 
 
-$paddingXsm: 2px;
-$paddingSm: 4px;
-$paddingSmd: 6px;
-$paddingMd: 8px;
-$paddingXl: 42px;
+$padding-xsm: 2px;
+$padding-sm: 4px;
+$padding-smd: 6px;
+$padding-md: 8px;
+$padding-xl: 42px;
+
+//
+// Breakpoint
+//
+
+$mobile-breakpoint: 780px;
+
+:export {
+  mobileBreakPoint: $mobile-breakpoint;
+}

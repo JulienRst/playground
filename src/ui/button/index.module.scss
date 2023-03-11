@@ -2,8 +2,8 @@
 
 .button {
   padding: 2rem 4rem;
-  background-color: $surfaceBackground;
-  color: $surfaceText;
+  background-color: $surface-background;
+  color: $surface-text;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -11,5 +11,5 @@
   position: relative;
   z-index: 10;
   transition: 0.3s;
-  font-family: $fontBody;
+  font-family: $font-body;
 }

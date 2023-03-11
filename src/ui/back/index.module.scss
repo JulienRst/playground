@@ -25,7 +25,7 @@
     position: absolute;
     height: 4px;
     width: 40%;
-    background-color: $surfaceText;
+    background-color: $surface-text;
     top: 50%;
     left: 50%;
     transform: translateX(-50%);
@@ -35,7 +35,7 @@
     position: absolute;
     height: 4px;
     width: 7%;
-    background-color: $surfaceText;
+    background-color: $surface-text;
     top: 50%;
     left: calc((100% - 40%) / 2);
     transform-origin: left;
