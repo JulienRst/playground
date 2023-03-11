@@ -59,7 +59,12 @@ const RAW_EXPERIENCES: RawExperience[] = [
     informations: {
       date: new Date(2021, 4),
       technos: ['React', 'Three.js'],
-      inspirations: [],
+      inspirations: [
+        {
+          link: 'https://tympanus.net/Tutorials/InfiniteLights/',
+          name: 'Codrops',
+        },
+      ],
       source:
         'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/road-light/index.tsx',
     },
@@ -92,8 +97,8 @@ const RAW_EXPERIENCES: RawExperience[] = [
       technos: ['React', 'Three.js'],
       inspirations: [
         {
-          link: 'https://twitter.com/mattdesl/status/1381373529980084226',
-          name: 'Matt DesLauriers',
+          link: 'https://twitter.com/robbietilton/status/1325099751746932738',
+          name: "Robbie Tilton's Trading Card",
         },
       ],
       source:
