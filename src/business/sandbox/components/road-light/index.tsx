@@ -80,7 +80,7 @@ const RoadLight: React.FC<RoadLightProps> = ({
         roadSections={roadSections}
         count={numberOfLights}
         speed={realSpeed}
-        color={new Color(0xff1021)}
+        color={new Color(0xffffff)}
         position={new Vector3(roadWidth / 4, 0, 0)}
       />
       <CarLights
@@ -89,7 +89,7 @@ const RoadLight: React.FC<RoadLightProps> = ({
         roadSections={roadSections}
         count={numberOfLights}
         speed={-realSpeed}
-        color={new Color(0xffffff)}
+        color={new Color(0xff1021)}
         position={new Vector3(-roadWidth / 4, 0, 0)}
       />
       <Road width={roadWidth} depth={roadDepth} />
