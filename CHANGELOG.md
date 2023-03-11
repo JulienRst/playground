@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/JulienRst/playground/compare/v0.1.2...v0.1.3) (2023-03-11)
+
+
+### Features
+
+* **release:** Add auto release on changelog ([c625bbc](https://github.com/JulienRst/playground/commit/c625bbc59cd80d7c53ab554149f6e12d7c6b877c))
+
+
+### Bug Fixes
+
+* **road-light:** fix transform key transition to remove glitchy start ([54433a9](https://github.com/JulienRst/playground/commit/54433a93117e429959f4a747e8db880ecada9543))
+
 ### [0.1.2](https://github.com/JulienRst/playground/compare/v0.1.1...v0.1.2) (2023-03-11)
 
 
