@@ -12,9 +12,10 @@
     .ctnRender {
       .render {
         transform: translate(0, 0);
-        transition: 1s;
+        transition: 1s, 0.3s, 0.3s;
         opacity: 1;
-        transition-delay: 0.3s; // let canvas load himself a bit
+        transition-property: opacity, transform, -webkit-transform;
+        transition-delay: 0.3s, 0s, 0s; // let canvas load himself a bit
       }
     }
   }
