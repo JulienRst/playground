@@ -14,8 +14,7 @@
         transform: translate(0, 0);
         transition: 1s;
         opacity: 1;
-        transition-property: opacity, transform;
-        transition-delay: 0.3s, 0s;
+        transition-delay: 0.3s; // let canvas load himself a bit
       }
     }
   }
