@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/JulienRst/playground/compare/v0.1.1...v0.1.2) (2023-03-11)
+
+
+### Bug Fixes
+
+* **road-light:** Swap colors of cars ([a62daf8](https://github.com/JulienRst/playground/commit/a62daf8b7f7c64a00bdf87b68833a528cb9fbb72))
+* **sandbox:** Add missing inspirations ([828956e](https://github.com/JulienRst/playground/commit/828956e631ffd5c8d876fc9d7de304f3dbea2c13))
+
 ### [0.1.1](https://github.com/JulienRst/playground/compare/v0.1.0...v0.1.1) (2023-03-11)
 
 
