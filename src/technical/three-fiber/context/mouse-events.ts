@@ -8,16 +8,6 @@ export interface LastMouseEvent {
   event: ReactMouseEvent;
 }
 
-// export default function useMouseEvents() {
-//   console.log('//// Rerender useMouseEvents');
-//   const [lastMouseEvents, setLastMouseEvent] = useState<LastMouseEvent[]>([]);
-
-//   return {
-//     lastMouseEvents,
-//     setLastMouseEvent,
-//   };
-// }
-
 const LastMouseEventContext = createContext<LastMouseEvent | null>(null);
 
 export const useLastMouseEventContext = () => useContext(LastMouseEventContext);

@@ -61,7 +61,7 @@ const Inceptcard: React.FC = () => {
         </mesh>
         <mesh position={[-0.8, -1.4, 0.002]}>
           <textGeometry
-            args={['Magic Ball', { font, size: 0.3, height: 0.001 }]}
+            args={['Magic Box', { font, size: 0.3, height: 0.001 }]}
           />
           <meshStandardMaterial
             color={0x101010}
