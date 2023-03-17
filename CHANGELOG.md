@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/JulienRst/playground/compare/v0.1.3...v0.1.4) (2023-03-17)
+
+
+### Bug Fixes
+
+* **inceptcard:** Change wording of the card + remove console.log ([d161b8a](https://github.com/JulienRst/playground/commit/d161b8a96927537472138b96a061a5cb9165d115))
+
 ### [0.1.3](https://github.com/JulienRst/playground/compare/v0.1.2...v0.1.3) (2023-03-11)
 
 
