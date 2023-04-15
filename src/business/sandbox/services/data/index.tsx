@@ -1,6 +1,7 @@
 import Dimensions from 'business/sandbox/components/dimensions';
 import Inceptcard from 'business/sandbox/components/inceptcard';
 import InfiniteCube from 'business/sandbox/components/infinite-cube';
+import Rings from 'business/sandbox/components/rings';
 import RoadLight from 'business/sandbox/components/road-light';
 import TriangleParty from 'business/sandbox/components/triangle-party';
 import TwerkingTriangle from 'business/sandbox/components/twerking-triangle';
@@ -103,6 +104,24 @@ const RAW_EXPERIENCES: RawExperience[] = [
       ],
       source:
         'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/inceptcard/index.tsx',
+    },
+  },
+  {
+    id: 7,
+    name: 'Dancing Rings',
+    component: <Rings />,
+    isTitleNeeded: false,
+    informations: {
+      date: new Date(2021, 3),
+      technos: ['React', 'Three.js'],
+      inspirations: [
+        {
+          link: 'https://twitter.com/Damian_Kidd/status/1592230891266392064',
+          name: 'Damian Kidd - Zero, Three Sixty',
+        },
+      ],
+      source:
+        'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/rings/index.tsx',
     },
   },
 ];
