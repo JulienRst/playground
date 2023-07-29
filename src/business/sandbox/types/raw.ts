@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 
-type Techno = 'Three.js' | 'React';
+type Techno = 'Three.js' | 'React' | 'Drei';
 
 interface Informations {
   date: Date;

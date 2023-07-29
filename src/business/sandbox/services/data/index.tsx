@@ -1,3 +1,4 @@
+import AstralBoxes from 'business/sandbox/components/astral-boxes';
 import Dimensions from 'business/sandbox/components/dimensions';
 import Inceptcard from 'business/sandbox/components/inceptcard';
 import InfiniteCube from 'business/sandbox/components/infinite-cube';
@@ -112,7 +113,7 @@ const RAW_EXPERIENCES: RawExperience[] = [
     component: <Rings />,
     isTitleNeeded: false,
     informations: {
-      date: new Date(2021, 3),
+      date: new Date(2023, 3),
       technos: ['React', 'Three.js'],
       inspirations: [
         {
@@ -122,6 +123,28 @@ const RAW_EXPERIENCES: RawExperience[] = [
       ],
       source:
         'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/rings/index.tsx',
+    },
+  },
+  {
+    id: 8,
+    name: 'Astral Boxes',
+    component: <AstralBoxes />,
+    isTitleNeeded: false,
+    informations: {
+      date: new Date(2023, 6),
+      technos: ['React', 'Three.js', 'Drei'],
+      inspirations: [
+        {
+          name: '@0xca0a',
+          link: 'https://twitter.com/0xca0a/status/1666372175404646405',
+        },
+        {
+          name: 'Magic Box Sandbox',
+          link: 'https://codesandbox.io/s/magic-box-drc6qg?file=/src/App.js',
+        },
+      ],
+      source:
+        'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/astral-boxes/index.tsx',
     },
   },
 ];
