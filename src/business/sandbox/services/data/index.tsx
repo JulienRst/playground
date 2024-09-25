@@ -4,7 +4,7 @@ import Inceptcard from 'business/sandbox/components/inceptcard';
 import InfiniteCube from 'business/sandbox/components/infinite-cube';
 import Rings from 'business/sandbox/components/rings';
 import RoadLight from 'business/sandbox/components/road-light';
-import Spaceships from 'business/sandbox/components/spaceship';
+import Spaceships from 'business/sandbox/components/spaceships';
 import TriangleParty from 'business/sandbox/components/triangle-party';
 import TwerkingTriangle from 'business/sandbox/components/twerking-triangle';
 import RawExperience from 'business/sandbox/types/raw';
