@@ -4,6 +4,7 @@ import Inceptcard from 'business/sandbox/components/inceptcard';
 import InfiniteCube from 'business/sandbox/components/infinite-cube';
 import Rings from 'business/sandbox/components/rings';
 import RoadLight from 'business/sandbox/components/road-light';
+import Spaceships from 'business/sandbox/components/spaceship';
 import TriangleParty from 'business/sandbox/components/triangle-party';
 import TwerkingTriangle from 'business/sandbox/components/twerking-triangle';
 import RawExperience from 'business/sandbox/types/raw';
@@ -145,6 +146,19 @@ const RAW_EXPERIENCES: RawExperience[] = [
       ],
       source:
         'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/astral-boxes/index.tsx',
+    },
+  },
+  {
+    id: 9,
+    name: 'Spaceships',
+    component: <Spaceships />,
+    isTitleNeeded: false,
+    informations: {
+      date: new Date(2024, 8),
+      technos: ['React', 'Three.js', 'Drei'],
+      inspirations: [],
+      source:
+        'https://github.com/JulienRst/playground/blob/main/src/business/sandbox/components/spaceships/index.tsx',
     },
   },
 ];
